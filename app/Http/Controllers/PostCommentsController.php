@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Comment;
+use App\Post;   
 use Illuminate\Support\Facades\Auth;
 class PostCommentsController extends Controller
 {
@@ -38,6 +39,7 @@ class PostCommentsController extends Controller
     public function store(Request $request)
     {
         $user = Auth::user();
+        
         $data = [
             'post_id' => $request->post_id,
             'author' => $user->name,
@@ -48,7 +50,7 @@ class PostCommentsController extends Controller
 
         Comment::create($data);
 
-        $request->session()->flash('comment_message', 'Your comment has ben posted.');
+        $request->session()->flash('comment_message', 'Your message has ben send to moderation.');
         return redirect()->back();
     }
 
@@ -60,7 +62,9 @@ class PostCommentsController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        $comments = $post->comments;
+        return view('admin.comments.show', compact('comments'));
     }
 
     /**
@@ -83,7 +87,8 @@ class PostCommentsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Comment::findOrFail($id)->update($request->all());
+        return redirect('/admin/comments');
     }
 
     /**
@@ -94,6 +99,7 @@ class PostCommentsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Comment::findOrFail($id)->delete();
+        return redirect()->back();
     }
 }
