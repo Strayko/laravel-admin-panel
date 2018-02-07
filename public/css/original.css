@@ -5147,6 +5147,9 @@ a.thumbnail.active {
   padding-left: 0;
   list-style: none;
 }
+#nested-comment {
+  margin-top: 60px;
+}
 .list-group {
   padding-left: 0;
   margin-bottom: 20px;
