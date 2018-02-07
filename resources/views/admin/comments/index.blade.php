@@ -19,6 +19,7 @@
                 <th></th>
                 <th></th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -29,6 +30,7 @@
                 <td>{{$comment->email}}</td>
                 <td>{{str_limit($comment->body, 15)}}</td>
                 <td><a href="{{route('home.post', $comment->post->id)}}">View Post</a></td>
+                <td><a href="{{route('replies.show', $comment->id)}}">View Replies</a></td>
                 <td>
                     @if($comment->is_active == 1)
                         {!! Form::open(['method'=>'PATCH', 'action'=>['PostCommentsController@update', $comment->id]]) !!}

@@ -1,0 +1,143 @@
+[33mcommit ee5595800ff7418cd0177fb4eac6ef591e9ecfa1[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Moamer <strayko_lol@windowslive.com>
+Date:   Wed Feb 7 15:00:38 2018 +0100
+
+    Displaying replies in admin part 2
+
+[33mcommit cd4b66c38371e390183325e83889762926014fb2[m
+Author: Moamer <strayko_lol@windowslive.com>
+Date:   Mon Feb 5 19:17:02 2018 +0100
+
+    Displaying comments in post page
+
+[33mcommit a17c0021ebb65d04bb720a28788fde446222c80f[m
+Author: Moamer <strayko_lol@windowslive.com>
+Date:   Sat Feb 3 15:58:29 2018 +0100
+
+    Approving, un-approving and deleting setting it up
+
+[33mcommit 6d0601776e04e67654c9a50dddf32b584d635f8a[m
+Author: Moamer <strayko_lol@windowslive.com>
+Date:   Thu Feb 1 19:52:36 2018 +0100
+
+    Creating post and comment
+
+[33mcommit 61013e292a96ce29daa7e117bdaca5331c7ba447[m
+Author: Moamer <strayko_lol@windowslive.com>
+Date:   Thu Feb 1 15:39:08 2018 +0100
+
+    Comment - Seting up views
+
+[33mcommit dd3813d2d52e9d23af0a5d10fd80260a1ad7bbad[m
+Author: Moamer <strayko_lol@windowslive.com>
+Date:   Tue Jan 30 19:50:07 2018 +0100
+
+    Media - upload, displaying and deleting images
+
+[33mcommit 4d2754a55827ab48336cd07381bd5971f3bc7d2c[m
+Author: Moamer <stryko_lol@windowslive.com>
+Date:   Tue Jan 30 14:36:34 2018 +0100
+
+    Creating categories
+
+[33mcommit ab2dbc3f0fe40a9b914af9ac15380cd7ce6bd295[m
+Author: Moamer <strayko_lol@windowslive.com>
+Date:   Tue Jan 30 13:49:53 2018 +0100
+
+    Adding images to edit post
+
+[33mcommit fc45a6e9e7e2e320b9d38e91897c929f09c3e4b5[m
+Author: Moamer <strayko_lol@windowslive.com>
+Date:   Tue Jan 30 12:35:51 2018 +0100
+
+    Deleting posts
+
+[33mcommit 33234a0d4efeb68011e716df3e8800e19b40a685[m
+Author: Moamer <strayko_lol@windowslive.com>
+Date:   Mon Jan 29 18:09:14 2018 +0100
+
+    Compiling file for the application
+
+[33mcommit d46c82ddfa7627c53f6bb1c36f3735abd9f64afd[m
+Author: Moamer <stryko_lol@windowslive.com>
+Date:   Mon Jan 29 18:00:13 2018 +0100
+
+    Displaying and creating posts with categories
+
+[33mcommit 00dfb275b67c4ba3c23ecebcc12b1be1a72ab6c5[m
+Author: Moamer <stryko_lol@windowslive.com>
+Date:   Mon Jan 29 17:25:05 2018 +0100
+
+    Displaying images in post
+
+[33mcommit c87a014afe13c8da5b60a52fe2be20b0375be235[m
+Author: Moamer <stryko_lol@windowslive.com>
+Date:   Mon Jan 29 15:04:25 2018 +0100
+
+    Displaying post and relationship setup
+
+[33mcommit a19986febc0da5ffdb560e7945f65ea913b547a1[m
+Author: Moamer <stryko_lol@windowslive.com>
+Date:   Mon Jan 29 13:07:31 2018 +0100
+
+    Deleting images from the directory
+
+[33mcommit b5fa9380e8f5649887a29c3a72da94f5641ab05c[m
+Author: Moamer <stryko_lol@windowslive.com>
+Date:   Sun Jan 28 19:28:37 2018 +0100
+
+    Adding more security
+
+[33mcommit 6cdde16c264b7c0e694be7bd2f4414517d1a25f6[m
+Author: Moamer <stryko_lol@windowslive.com>
+Date:   Sun Jan 28 19:07:50 2018 +0100
+
+    Deleting images from the directory
+
+[33mcommit 97d62fc0277008a46ce81bf9676bf631c804cd23[m
+Author: Moamer <stryko_lol@windowslive.com>
+Date:   Sun Jan 28 18:26:31 2018 +0100
+
+    Deleting users
+
+[33mcommit 52d9b0be7a28abe2b91798372d9af3be90ddc98b[m
+Author: Moamer <stryko_lol@windowslive.com>
+Date:   Sun Jan 28 17:04:02 2018 +0100
+
+    deleted unnecessary file
+
+[33mcommit 4e5ff167745d956a94ddf7e4e91e4fc5d77af360[m
+Author: Moamer <strayko_lol@windowslive.com>
+Date:   Sun Jan 28 17:00:56 2018 +0100
+
+    deleted unnecessary file
+
+[33mcommit d77c20ca4af0e06712499d7731c4375a83a332bb[m
+Author: Moamer <stryko_lol@windowslive.com>
+Date:   Sun Jan 28 16:53:04 2018 +0100
+
+    Updating - Fixing loose ends
+
+[33mcommit c653169624d50cd5c02d4f7cbde98d9133a6b092[m
+Author: root <root@MOAMER.localdomain>
+Date:   Sat Jan 27 16:07:27 2018 +0100
+
+    Edit user - displaying images and status
+
+[33mcommit b7799a170ee545dc44b98cf30242da960c7a8d9d[m
+Author: root <root@MOAMER.localdomain>
+Date:   Sat Jan 27 15:14:51 2018 +0100
+
+    Displaying photos using an accessor
+
+[33mcommit 2dcb457105dfdac0c66a805f2677bee9d0df6747[m
+Author: root <root@MOAMER.localdomain>
+Date:   Sat Jan 27 14:53:36 2018 +0100
+
+    Persisting user with photo
+
+[33mcommit aa9fba0d9b10bb77b8d88d53c0a73db8793695da[m
+Author: root <root@MOAMER.localdomain>
+Date:   Sat Jan 27 14:13:05 2018 +0100
+
+    First commit
