@@ -36,3 +36,7 @@ Route::group(['middleware'=>'admin'], function() {
 Route::group(['middleware'=>'auth'], function() {
     Route::post('comment/reply', 'CommentRepliesController@createReply');
 });
+
+Route::get('api/posts/{post}', function (App\Post $post) {
+    return $post->title;
+});

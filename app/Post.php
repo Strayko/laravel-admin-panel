@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 
 
 class Post extends Model
@@ -18,6 +19,10 @@ class Post extends Model
                 'on_update' => true,
             ]
         ];
+    }
+
+    public function getRouteKeyName() {
+        return 'slug';
     }
 
     protected $fillable = [
