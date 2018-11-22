@@ -25,7 +25,7 @@
             <td><img height="50" src="{{$post->photo ? $post->photo->file : 'http://placehold.it/400x400'}}" alt="" class="img-rounded"></td>
             <td>{{$post->category ? $post->category->name : 'Uncategorized'}}</td>
             <td>{{$post->title}}</td>
-            <td>{{$post->body}}</td>
+            <td>{{str_limit($post->body, 10)}}</td>
             <td>{{$post->created_at->diffForHumans()}}</td>
             <td>{{$post->updated_at->diffForHumans()}}</td>
           </tr>
