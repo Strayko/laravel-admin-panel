@@ -1,11 +1,11 @@
 @extends('layouts.admin')
-
+<title>Create Post</title>
 @section('content')
 
     @include('includes.formError')
     <h1>Create Post</h1>
     <div class="col-sm-4">
-    {!! Form::open(['method'=>'POST', 'action'=>'AdminPostsController@store', 'files'=>true]) !!}
+        {!! Form::open(['method'=>'POST', 'action'=>'AdminPostsController@store', 'files'=>true]) !!}
         {{csrf_field()}}
         <div class="form-group">
             {!! Form::label('title', 'Title:') !!}
@@ -24,7 +24,7 @@
             {!! Form::textarea('body', null, ['class'=>'form-control']) !!}
         </div>
         {!! Form::submit('Create', ['class'=>'btn btn-success']) !!}
-    {!! Form::close() !!}
+        {!! Form::close() !!}
     </div>
 @endsection
 

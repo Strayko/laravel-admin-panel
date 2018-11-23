@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-<title>Create User</title>
+<title>Edit User</title>
 @section('content')
 
     @include('includes.formError')
