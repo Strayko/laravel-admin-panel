@@ -23,7 +23,12 @@
             {!! Form::label('body', 'Description:') !!}
             {!! Form::textarea('body', null, ['class'=>'form-control']) !!}
         </div>
-        {!! Form::submit('Update', ['class'=>'btn btn-success']) !!}
+        {!! Form::submit('Update', ['class'=>'btn btn-success col-sm-4']) !!}
+        {!! Form::close() !!}
+
+        {!! Form::open(['method'=>'DELETE', 'action'=>['AdminPostsController@destroy', $post->id]]) !!}
+            {{csrf_field()}}
+            {!! Form::submit('Delete', ['class'=>'btn btn-danger col-sm-4 pull-right']) !!}
         {!! Form::close() !!}
     </div>
 @endsection
