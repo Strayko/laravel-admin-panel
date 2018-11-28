@@ -104,13 +104,13 @@
                 @endif
 
                 </div>
-            </div>
+
             </div>
             @endforeach
     @endif
 
 @endsection
-
+    </div>
 @section('scripts')
     <script>
         $(".comment-reply-container .toggle-reply").click(function() {
