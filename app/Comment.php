@@ -11,7 +11,8 @@ class Comment extends Model
         'is_active',
         'author',
         'email',
-        'body'
+        'body',
+        'photo'
     ];
 
     public function replies() {

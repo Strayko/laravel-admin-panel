@@ -4,4 +4,10 @@
 .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
   height: 34px; }
 
+#nested-comment {
+  margin-top: 50px; }
+
+.comment-reply {
+  display: none; }
+
 /*# sourceMappingURL=app.css.map */

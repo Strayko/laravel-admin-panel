@@ -51,6 +51,10 @@ Route::group(['middleware'=>['web','admin']], function() {
     });
 });
 
+Route::group(['middleware'=>['web']], function() {
+    Route::post('comment/reply', 'CommentRepliesController@createReply');
+});
+
 
 
 
