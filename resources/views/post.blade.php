@@ -2,7 +2,6 @@
 
 @section('content')
 
-
     <!-- Blog Post -->
 
     <!-- Title -->
@@ -66,11 +65,11 @@
                     <h4 class="media-heading">{{$comment->author}}
                         <small>{{$comment->created_at->diffForHumans()}}</small>
                     </h4>
-                    {{$comment->body}}
+                   {{$comment->body}}
 
                     @if(count($comment->replies) > 0)
                     @foreach($comment->replies as $reply)
-
+                    @if($reply->is_active == 1)
                     <!-- Nested Comment -->
                     <div id="nested-comment" class="media">
                         <a class="pull-left" href="#">
@@ -98,6 +97,9 @@
 
                     </div>
                     </div>
+                        @else
+                        <h1 class="text-center">No Replies</h1>
+                        @endif
                     @endforeach
                 @endif
 
@@ -106,7 +108,9 @@
             </div>
             @endforeach
     @endif
+
 @endsection
+
 @section('scripts')
     <script>
         $(".comment-reply-container .toggle-reply").click(function() {

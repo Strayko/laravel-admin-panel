@@ -64,14 +64,16 @@
     <div class="row">
 
         <!-- Blog Post Content Column -->
-        <div class="col-lg-8">
 
-            @yield('content')
+            <div class="col-lg-8">
+                @yield('content')
+            </div>
 
-        </div>
+
+
 
         <!-- Blog Sidebar Widgets Column -->
-        <div class="col-md-4">
+        <div class="col-lg-4">
 
             <!-- Blog Search Well -->
             <div class="well">
@@ -128,6 +130,7 @@
         </div>
 
     </div>
+
     <!-- /.row -->
 
     <hr>
