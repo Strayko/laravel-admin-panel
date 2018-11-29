@@ -59,13 +59,29 @@
             <!-- Comment -->
             <div class="media">
                 <a class="pull-left" href="#">
-                    <img height="64" class="media-object" src="{{$comment->photo}}" alt="">
+                    <img height="64" class="media-object" src="{{$comment->photo}}" alt=""> <!--gravatar Auth::user()->gravatar-->
                 </a>
                 <div class="media-body">
                     <h4 class="media-heading">{{$comment->author}}
                         <small>{{$comment->created_at->diffForHumans()}}</small>
                     </h4>
                    {{$comment->body}}
+                    <div class="comment-reply-container">
+                        <button class="toggle-reply btn btn-primary pull-right">Reply</button>
+                        <div class="comment-reply">
+
+                            {!! Form::open(['method'=>'POST', 'action'=>'CommentRepliesController@createReply']) !!}
+                            <input type="hidden" name="comment_id" value="{{$comment->id}}">
+                            <div class="form-group">
+                                {!! Form::label('body', 'Leave a Comment:') !!}
+                                {!! Form::textarea('body', null, ['class'=>'form-control', 'rows'=>1]) !!}
+                            </div>
+                            {!! Form::submit('Submit', ['class'=>'btn btn-success']) !!}
+                            {!! Form::close() !!}
+
+                        </div>
+                    </div>
+
 
                     @if(count($comment->replies) > 0)
                     @foreach($comment->replies as $reply)
@@ -82,21 +98,7 @@
                             {{$reply->body}}
                         </div>
 
-                        <div class="comment-reply-container">
-                            <button class="toggle-reply btn btn-primary pull-right">Reply</button>
-                            <div class="comment-reply">
 
-                        {!! Form::open(['method'=>'POST', 'action'=>'CommentRepliesController@createReply']) !!}
-                            <input type="hidden" name="comment_id" value="{{$comment->id}}">
-                            <div class="form-group">
-                                {!! Form::label('body', 'Leave a Comment:') !!}
-                                {!! Form::textarea('body', null, ['class'=>'form-control', 'rows'=>1]) !!}
-                            </div>
-                            {!! Form::submit('Submit', ['class'=>'btn btn-success']) !!}
-                        {!! Form::close() !!}
-
-                    </div>
-                    </div>
                         @else
                         <h1 class="text-center">No Replies</h1>
                         @endif
