@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 <title>Edit Post</title>
 @section('content')
-
+    @include('includes.tinyeditor')
     @include('includes.formError')
     <h1>Edit Post</h1><div class="col-sm-3">
         <img src="{{$post->photo ? $post->photo->file : 'http://placehold.it/400x400'}}" alt="" class="img-responsive img-rounded">
@@ -21,10 +21,12 @@
             {!! Form::label('photo_id', 'Photo:') !!}
             {!! Form::file('photo_id', ['class'=>'form-control-btn']) !!}
         </div>
-        <div class="form-group">
+    </div>
+        <div class="form-group col-sm-8">
             {!! Form::label('body', 'Description:') !!}
             {!! Form::textarea('body', null, ['class'=>'form-control']) !!}
-        </div>
+
+
         {!! Form::submit('Update', ['class'=>'btn btn-success col-sm-4']) !!}
         {!! Form::close() !!}
 
@@ -32,7 +34,8 @@
             {{csrf_field()}}
             {!! Form::submit('Delete', ['class'=>'btn btn-danger col-sm-4 pull-right']) !!}
         {!! Form::close() !!}
-    </div>
+        </div>
+
 @endsection
 
 @section('footer')

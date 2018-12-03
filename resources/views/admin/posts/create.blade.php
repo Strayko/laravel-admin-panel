@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 <title>Create Post</title>
 @section('content')
-
+    @include('includes.tinyeditor')
     @include('includes.formError')
     <h1>Create Post</h1>
     <div class="col-sm-4">
@@ -19,13 +19,15 @@
             {!! Form::label('photo_id', 'Photo:') !!}
             {!! Form::file('photo_id', ['class'=>'form-control-btn']) !!}
         </div>
-        <div class="form-group">
-            {!! Form::label('body', 'Description:') !!}
-            {!! Form::textarea('body', null, ['class'=>'form-control']) !!}
-        </div>
+
         {!! Form::submit('Create', ['class'=>'btn btn-success']) !!}
-        {!! Form::close() !!}
     </div>
+    <div class="form-group col-sm-12">
+        {!! Form::label('body', 'Description:') !!}
+        {!! Form::textarea('body', null, ['class'=>'form-control']) !!}
+    </div>
+
+    {!! Form::close() !!}
 @endsection
 
 @section('footer')
