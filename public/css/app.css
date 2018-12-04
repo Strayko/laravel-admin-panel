@@ -1,13 +1,18 @@
 #admin-page {
-  padding-top: 0px; }
+  padding-top: 0px;
+}
 
-.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
-  height: 34px; }
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group {
+  height: 34px;
+}
 
 #nested-comment {
-  margin-top: 50px; }
+  margin-top: 50px;
+}
 
 .comment-reply {
-  display: none; }
+  display: none;
+}
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiL21udC9jL3dhbXAvd3d3L2NvZGVoYWNraW5nL3Jlc291cmNlcy9hc3NldHMvc2Fzcy9hcHAuc2NzcyIsInNvdXJjZXMiOlsiL21udC9jL3dhbXAvd3d3L2NvZGVoYWNraW5nL3Jlc291cmNlcy9hc3NldHMvc2Fzcy9hcHAuc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBAaW1wb3J0IFwibm9kZV9tb2R1bGVzL2Jvb3RzdHJhcC1zYXNzL2Fzc2V0cy9zdHlsZXNoZWV0cy9ib290c3RyYXBcIjtcblxuI2FkbWluLXBhZ2Uge1xuICBwYWRkaW5nLXRvcDogMHB4O1xufVxuLmlucHV0LWdyb3VwLWJ0bjpsYXN0LWNoaWxkID4gLmJ0biwgLmlucHV0LWdyb3VwLWJ0bjpsYXN0LWNoaWxkID4gLmJ0bi1ncm91cCB7XG4gIGhlaWdodDogMzRweDtcbn1cbiNuZXN0ZWQtY29tbWVudCB7XG4gIG1hcmdpbi10b3A6IDUwcHg7XG59XG4uY29tbWVudC1yZXBseSB7XG4gIGRpc3BsYXk6IG5vbmU7XG59Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBLEFBQUEsV0FBVyxDQUFDO0VBQ1YsV0FBVyxFQUFFLEdBQUc7Q0FDakI7O0FBQ0QsQUFBQSxnQkFBZ0IsQUFBQSxXQUFXLEdBQUcsSUFBSSxFQUFFLGdCQUFnQixBQUFBLFdBQVcsR0FBRyxVQUFVLENBQUM7RUFDM0UsTUFBTSxFQUFFLElBQUk7Q0FDYjs7QUFDRCxBQUFBLGVBQWUsQ0FBQztFQUNkLFVBQVUsRUFBRSxJQUFJO0NBQ2pCOztBQUNELEFBQUEsY0FBYyxDQUFDO0VBQ2IsT0FBTyxFQUFFLElBQUk7Q0FDZCJ9 */

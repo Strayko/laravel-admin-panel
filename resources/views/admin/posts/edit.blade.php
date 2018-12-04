@@ -8,7 +8,7 @@
     </div>
     <div class="col-sm-4">
         {!! Form::model($post, ['method'=>'PATCH', 'action'=>['AdminPostsController@update', $post->id], 'files'=>true]) !!}
-        {{csrf_field()}}
+
         <div class="form-group">
             {!! Form::label('title', 'Title:') !!}
             {!! Form::text('title', null, ['class'=>'form-control']) !!}
@@ -31,7 +31,7 @@
         {!! Form::close() !!}
 
         {!! Form::open(['method'=>'DELETE', 'action'=>['AdminPostsController@destroy', $post->id]]) !!}
-            {{csrf_field()}}
+
             {!! Form::submit('Delete', ['class'=>'btn btn-danger col-sm-4 pull-right']) !!}
         {!! Form::close() !!}
         </div>
