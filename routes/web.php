@@ -69,9 +69,7 @@ Route::group(['middleware'=>['web','admin']], function() {
     ]]);
 
     Route::get('/post/{id}', ['as'=>'home.post', 'uses'=>'AdminPostsController@post']);
-    Route::get('/admin', function() {
-        return view('admin.index');
-    });
+    Route::get('/admin', 'AdminController@index');
 });
 
 Route::group(['middleware'=>['web']], function() {
