@@ -19,3 +19,19 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+//$factory->define(App\User::class, function (Faker\Generator $faker) {
+//    return [
+//        'category_id' => $faker->numberBetween(1,0),
+//        'photo_id' => 1,
+//        'title' => $faker->sentence(7,10),
+//        'body' => $faker->paragraph(rand(10,15), true),
+//        'slug' => $faker->slug()
+//    ];
+//});
+
+//$factory->define(App\Role::class, function (Faker\Generator $faker) {
+//    return [
+//        'name' => $faker->randomElement(['administrator', 'author', 'subscriber']),
+//    ];
+//});
