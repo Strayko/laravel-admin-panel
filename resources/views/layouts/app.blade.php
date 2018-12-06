@@ -28,7 +28,7 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="position: sticky;">
         <div class="container">
             <div class="navbar-header">
 
@@ -42,15 +42,15 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                    Blog
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                </ul>
+                {{--<ul class="nav navbar-nav">--}}
+                    {{--<li><a href="{{ url('/home') }}">Home</a></li>--}}
+                {{--</ul>--}}
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
@@ -65,7 +65,11 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+                                @if(Auth::user()->isAdmin())
                                 <li><a href="{{ url('/admin') }}">Admin</a></li>
+                                @else
+                                <li><a href="{{ url('/') }}">Profile</a></li>
+                                @endif
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>
@@ -76,6 +80,47 @@
     </nav>
 
     @yield('content')
+
+    <!-- Navigation -->
+    {{--<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">--}}
+        {{--<div class="container">--}}
+            {{--<!-- Brand and toggle get grouped for better mobile display -->--}}
+            {{--<div class="navbar-header">--}}
+                {{--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">--}}
+                    {{--<span class="sr-only">Toggle navigation</span>--}}
+                    {{--<span class="icon-bar"></span>--}}
+                    {{--<span class="icon-bar"></span>--}}
+                    {{--<span class="icon-bar"></span>--}}
+                {{--</button>--}}
+                {{--<a class="navbar-brand" href="#">Start Bootstrap</a>--}}
+            {{--</div>--}}
+            {{--<!-- Collect the nav links, forms, and other content for toggling -->--}}
+            {{--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">--}}
+                {{--<ul class="nav navbar-nav">--}}
+                    {{--<li>--}}
+                        {{--<a href="#">About</a>--}}
+                    {{--</li>--}}
+                    {{--<li>--}}
+                        {{--<a href="#">Services</a>--}}
+                    {{--</li>--}}
+                    {{--<li>--}}
+                        {{--<a href="#">Contact</a>--}}
+                    {{--</li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
+            {{--<!-- /.navbar-collapse -->--}}
+        {{--</div>--}}
+        {{--<!-- /.container -->--}}
+    {{--</nav>--}}
+
+    <!-- Page Content -->
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>

@@ -14,12 +14,9 @@
 
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    Route::get('/', 'HomeController@index');
     Route::get('/logout', 'Auth\LoginController@logout');
     Route::auth();
-    Route::get('/home', 'HomeController@index');
 
 
     //Admin routes
