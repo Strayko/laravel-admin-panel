@@ -6,6 +6,7 @@ use App\Category;
 use App\Http\Requests\PostsCreateRequest;
 use App\Photo;
 use App\Post;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -20,6 +21,7 @@ class AdminPostsController extends Controller
      */
     public function index()
     {
+
         $posts = Post::paginate(2);
 
         return view('admin.posts.index', compact('posts'));
@@ -120,7 +122,9 @@ class AdminPostsController extends Controller
 
     public function post($slug) {
         $post = Post::findBySlugOrFail($slug);
+        $categories = Category::all();
+        $year = Carbon::now()->year;
         $comments = $post->comments()->whereIsActive(1)->get();
-        return view('post', compact('post', 'comments'));
+        return view('post', compact('post', 'comments', 'categories', 'year'));
     }
 }

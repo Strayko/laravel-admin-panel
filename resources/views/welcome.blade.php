@@ -20,11 +20,11 @@
                             <a href="#">{{$post->title}}</a>
                         </h2>
                         <p class="lead">
-                            by <a href="index.php">{{$post->user->name}}</a>
+                            by <a href="#">{{$post->user->name}}</a>
                         </p>
                         <p><span class="glyphicon glyphicon-time"></span> {{$post->created_at->diffForHumans()}}</p>
                         <hr>
-                        <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                        <img class="img-responsive" src="{{$post->photo ? $post->photo->file : $post->photoPlaceholder()}}" alt="">
                         <hr>
                         <p>{!! str_limit($post->body, 120) !!}</p>
                         <a class="btn btn-primary" href="/post/{{$post->slug}}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
@@ -34,6 +34,11 @@
                 @endif
 
                 <!-- Pagination -->
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-5">
+                        {{$posts->render()}}
+                    </div>
+                </div>
 
 
             </div>
@@ -61,29 +66,15 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
+                                @if($categories)
+                                    @foreach($categories as $category)
+                                        <li><a href="#">{{$category->name}}</a></li>
+                                    @endforeach
+                                @endif
+
                             </ul>
                         </div>
-                        <!-- /.col-lg-6 -->
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
+
                         <!-- /.col-lg-6 -->
                     </div>
                     <!-- /.row -->
@@ -106,7 +97,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2018</p>
+                    <p>Copyright &copy; Your Website Codehacking {{$year}}</p>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
